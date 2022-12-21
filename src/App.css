@@ -179,11 +179,12 @@ h2{
   margin-top: 0%;
 }
 
-.grapthclass{
+.graphclass{
   display: flex;
   justify-content: center;
   align-items: center;
-  /* height: 600px; */
+  flex-wrap: wrap;
+  height:auto;
 }
 .linegraph{
   width:100%
@@ -192,4 +193,27 @@ h2{
 .doughnutgraph{
   width: 100%;
   height: 50%;
+}
+
+.graphbody1{
+  flex: 1 1 auto;
+  min-height: 1px;
+  padding: 0.5rem;
+  background: white;
+  width: 900px;
+  margin: 2%;
+  height: auto !important;
+  border-radius: 10px;
+}
+
+.graphbody{
+  flex: 1 1 auto;
+  min-height: 1px;
+  padding: 0.5rem;
+  background: white;
+  width: 450px;
+  margin: 2%;
+  margin-left: 10%;
+  height: auto !important;
+  border-radius: 10px;
 }

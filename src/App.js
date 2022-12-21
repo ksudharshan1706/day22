@@ -95,21 +95,28 @@ export const data = {
 };
 
 function App() {
+  const stylesheet = { width: "30%" };
   return (
     <div className="App">
       <h1>Dashboard</h1>
       <Dashboard />
+      <div className="graphclass">
+        <div>
+          <Linegraph />
+        </div>
+        <div>
+          <Doughnutgraph />
+        </div>
+      </div>
       <div className="Cards">
         <div className="projectCard">
           <div className="marginData">
-            <Linegraph />
             <Project />
             <CardColour />
           </div>
         </div>
         <div className="projectCard1">
           <div className="marginData">
-            <Doughnutgraph />
             <Illustrations />
             <Development />
           </div>
@@ -122,7 +129,7 @@ function App() {
 
 function Linegraph() {
   return (
-    <div className="card-body">
+    <div className="graphbody1">
       <b>
         <div className="card-header">Earnings Overview</div>
       </b>
@@ -134,7 +141,7 @@ function Linegraph() {
 }
 function Doughnutgraph() {
   return (
-    <div className="card-body">
+    <div className="graphbody">
       <b>
         <div className="card-header">Revenue Source</div>
       </b>

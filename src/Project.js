@@ -88,7 +88,7 @@ function Bars({ data }) {
         : data.percent > 40 && data.percent <= 60
         ? "#4e73df"
         : data.percent > 60 && data.percent <= 80
-        ? "#5a5c69"
+        ? "#36b9cc"
         : data.percent > 80
         ? "#1cc88a"
         : "black",
