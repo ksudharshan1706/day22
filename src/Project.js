@@ -58,9 +58,11 @@ export function Project() {
   ];
 
   let [width, setwidth] = useState(20);
-  const stylesheet = {
-    width: `${width}%`,
-  };
+
+  // let [width, setwidth] = useState({
+  //   width: "20%",
+  // });
+
   return (
     <div className="card-body">
       <b>
@@ -68,19 +70,40 @@ export function Project() {
       </b>
       <div className="barInfo">
         {projectData.map((data, index) => {
-          return (
-            <div>
-              {/* {setwidth(data.percent)} */}
-              <div className="projects-data-div">
-                <h5>{data.name}</h5>
-                <h5>{data.percent}%</h5>
-              </div>
-              <div className="projects">
-                <div style={stylesheet} className="barlength"></div>
-              </div>
-            </div>
-          );
+          return <Bars data={data} />;
         })}
+      </div>
+    </div>
+  );
+}
+
+function Bars({ data }) {
+  const stylesheet = {
+    width: `${data.percent}%`,
+    background:
+      data.percent == 20
+        ? "#e74a3b"
+        : data.percent > 20 && data.percent <= 40
+        ? "#f6c23e"
+        : data.percent > 40 && data.percent <= 60
+        ? "#4e73df"
+        : data.percent > 60 && data.percent <= 80
+        ? "#5a5c69"
+        : data.percent > 80
+        ? "#1cc88a"
+        : "black",
+  };
+  return (
+    <div>
+      {/* {setwidth({ width: `${data.percent}%` })} */}
+      {/* {setwidth(data.percent)} */}
+      <div className="projects-data-div">
+        <h5>{data.name}</h5>
+        <h5>{data.percent}%</h5>
+      </div>
+      <div className="projects">
+        <div style={stylesheet} className="barlength"></div>
+        {/* <div className="barlength"></div> */}
       </div>
     </div>
   );

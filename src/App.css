@@ -178,3 +178,18 @@ h4{
 h2{
   margin-top: 0%;
 }
+
+.grapthclass{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* height: 600px; */
+}
+.linegraph{
+  width:100%
+}
+
+.doughnutgraph{
+  width: 100%;
+  height: 50%;
+}
